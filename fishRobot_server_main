@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+def main():
+    try:
+        t1 = threading.Thread(target = web_server)
+        t2 = threading.Thread(target = http_server)
+        t3 = threading.Thread(target = mysql_server)
+        t1.start()
+        t2.start()
+        t3.start()
+        diff_web_sensors_data()
+    except:
+        print("Error:unable to start thread!")
+    while True:
+        pass 
+
+
+if __name__ == "__main__"
+    main()
